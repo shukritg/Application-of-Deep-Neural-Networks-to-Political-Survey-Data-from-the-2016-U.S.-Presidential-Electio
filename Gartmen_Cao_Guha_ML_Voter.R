@@ -355,7 +355,7 @@ max(imiss_no_na)
 min(imp.imiss)
 min(imiss_no_na)
 # notice that max and min is 4.57 and 0.42 whereas for the actual dataset, it was 4 and 1 respectively
-# We leave is as it is since the nn will use the information flexibly.
+# We leave it as it is since the nn will use the information flexibly.
 
 # Now to replace the original block of voter with these new imputed values:
 class(imp.imiss)
@@ -1073,9 +1073,10 @@ plotROC(predictions[, 2], lol$targetsTest[, 2])
 # lines that our analysis was unable to capture. It may also be a result of a more imbalanced set of responses for votefor
 # than for presvote, although we would expect a nn network to still be flexible enough to account for such imbalances.
 
-table(imp.voter$vote_for_against_2016)
-table(imp.voter$presvote16post_2016)
-nrow(input.fullModel) # no. of observations used
-ncol(input.fullModel) # no. of variables used
+# Confusion Matrices:
+# table(imp.voter$vote_for_against_2016)
+# table(imp.voter$presvote16post_2016)
+# nrow(input.fullModel) # no. of observations used
+# ncol(input.fullModel) # no. of variables used
 
 
